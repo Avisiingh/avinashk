@@ -1,0 +1,140 @@
+{
+  "title": "My Learning Journey",
+  "description": "My complete learning journey and projects. Content will be updated as I progress.",
+  "categories": [
+    {
+      "id": "current-projects",
+      "title": "Current Projects",
+      "description": "Projects I'm actively developing",
+      "progress": 75,
+      "paths": [
+        {
+          "id": "portfolio",
+          "title": "Portfolio Website",
+          "description": "Building a modern portfolio website with Next.js",
+          "progress": 85,
+          "milestones": [
+            {
+              "id": "portfolio-features",
+              "title": "Portfolio Features",
+              "description": "Implementing portfolio features and improvements",
+              "resources": [
+                {
+                  "name": "Portfolio Repository",
+                  "url": "https://github.com/avinashkumar/portfolio",
+                  "type": "project",
+                  "completed": false,
+                  "progress": 85
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "api-project",
+          "title": "API Development",
+          "description": "Building RESTful APIs with Node.js",
+          "progress": 30,
+          "milestones": [
+            {
+              "id": "api-features",
+              "title": "API Features",
+              "description": "Developing API endpoints and features",
+              "resources": [
+                {
+                  "name": "API Project Repository",
+                  "url": "https://github.com/avinashkumar",
+                  "type": "project",
+                  "completed": false,
+                  "progress": 30
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "learning-projects",
+      "title": "Learning Projects",
+      "description": "Projects I'm building to learn new technologies",
+      "progress": 40,
+      "paths": [
+        {
+          "id": "frontend",
+          "title": "Frontend Development",
+          "description": "Learning modern frontend technologies",
+          "progress": 40,
+          "milestones": [
+            {
+              "id": "react-projects",
+              "title": "React Projects",
+              "description": "Building projects with React and Next.js",
+              "resources": [
+                {
+                  "name": "React Learning Repository",
+                  "url": "https://github.com/avinashkumar",
+                  "type": "project",
+                  "completed": false,
+                  "progress": 40
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future-projects",
+      "title": "Future Projects",
+      "description": "Projects I plan to work on",
+      "progress": 0,
+      "paths": [
+        {
+          "id": "machine-learning",
+          "title": "Machine Learning Projects",
+          "description": "AI and ML projects (Coming Soon)",
+          "progress": 0,
+          "milestones": [
+            {
+              "id": "ml-basics",
+              "title": "ML Basics",
+              "description": "Learning fundamentals of machine learning",
+              "resources": [
+                {
+                  "name": "ML Learning Repository",
+                  "url": "https://github.com/avinashkumar",
+                  "type": "project",
+                  "completed": false,
+                  "progress": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "data-science",
+          "title": "Data Science Projects",
+          "description": "Data analysis and visualization projects (Coming Soon)",
+          "progress": 0,
+          "milestones": [
+            {
+              "id": "data-analysis",
+              "title": "Data Analysis",
+              "description": "Learning data analysis techniques",
+              "resources": [
+                {
+                  "name": "Data Science Repository",
+                  "url": "https://github.com/avinashkumar",
+                  "type": "project",
+                  "completed": false,
+                  "progress": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,61 @@
+{
+  "name": "Avinash Kumar",
+  "title": "Data Scientist & Machine Learning Engineer",
+  "email": "avinasgavs40@gmail.com",
+  "phone": "+1 (123) 456-7890",
+  "location": "New York, NY",
+  "bio": "Data Scientist, Machine Learning Engineer, and Web Developer passionate about AI and technology.",
+  "longBio": "Hello! I'm Avinash Kumar, a passionate Data Scientist with expertise in Data Science, Machine Learning, AI, and Web Development. I have a strong background in statistical analysis and machine learning algorithms, and I'm particularly interested in developing AI solutions that solve real-world problems. My journey in the tech world began during my undergraduate studies when I discovered the power of data-driven decision making. Throughout my career, I've worked on various projects that have allowed me to develop a deep understanding of the entire data science pipeline, from data collection and cleaning to model deployment. I'm constantly learning and exploring new technologies to stay at the forefront of innovation. When I'm not coding or analyzing data, you can find me reading about the latest advancements in AI, hiking, or experimenting with new recipes. I believe that maintaining a balance between technical work and personal interests helps foster creativity and problem-solving abilities.",
+  "education": [
+    {
+      "degree": "Master of Science in Data Science",
+      "institution": "University of Data Science",
+      "location": "New York, NY",
+      "startYear": "2020",
+      "endYear": "2022",
+      "description": "Specialized in machine learning and artificial intelligence."
+    },
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "institution": "Institute of Technology",
+      "location": "Mumbai, India",
+      "startYear": "2016",
+      "endYear": "2020",
+      "description": "Focused on algorithms, data structures, and software development."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Data Scientist",
+      "company": "AI Solutions Inc.",
+      "location": "New York, NY",
+      "startDate": "2022",
+      "endDate": "Present",
+      "description": "Leading data science initiatives and developing machine learning models for predictive analytics.",
+      "achievements": [
+        "Developed a recommendation system that increased user engagement by 35%",
+        "Implemented NLP algorithms for sentiment analysis with 92% accuracy",
+        "Led a team of 5 data scientists on various projects"
+      ]
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Tech Innovations",
+      "location": "San Francisco, CA",
+      "startDate": "2020",
+      "endDate": "2022",
+      "description": "Worked on machine learning models and data analysis for business intelligence.",
+      "achievements": [
+        "Created predictive models for customer churn reduction",
+        "Developed data visualization dashboards for executive decision making",
+        "Optimized ETL processes reducing processing time by 40%"
+      ]
+    }
+  ],
+  "socialLinks": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "https://twitter.com/yourusername",
+    "medium": "https://medium.com/@yourusername"
+  }
+} 

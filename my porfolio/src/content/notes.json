@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "description": "Notes on various mathematical concepts and formulas.",
+      "notes": [
+        {
+          "id": "math-1",
+          "title": "Linear Algebra Fundamentals",
+          "excerpt": "Key concepts in linear algebra including vectors, matrices, and transformations.",
+          "date": "March 5, 2024",
+          "tags": ["Linear Algebra", "Matrices", "Vectors"]
+        },
+        {
+          "id": "math-2",
+          "title": "Calculus Cheat Sheet",
+          "excerpt": "Quick reference for derivatives, integrals, and series expansions.",
+          "date": "February 20, 2024",
+          "tags": ["Calculus", "Derivatives", "Integrals"]
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "description": "Programming notes and snippets for Python development.",
+      "notes": [
+        {
+          "id": "python-1",
+          "title": "Data Structures in Python",
+          "excerpt": "Overview of lists, dictionaries, sets, and tuples with examples.",
+          "date": "March 7, 2024",
+          "tags": ["Python", "Data Structures", "Programming"]
+        },
+        {
+          "id": "python-2",
+          "title": "Python for Data Analysis",
+          "excerpt": "Using pandas, NumPy, and matplotlib for data manipulation and visualization.",
+          "date": "February 28, 2024",
+          "tags": ["Python", "Pandas", "Data Analysis"]
+        }
+      ]
+    },
+    {
+      "id": "ml",
+      "name": "Machine Learning",
+      "description": "Notes on machine learning algorithms, techniques, and applications.",
+      "notes": [
+        {
+          "id": "ml-1",
+          "title": "Supervised Learning Algorithms",
+          "excerpt": "Overview of regression, classification, decision trees, and neural networks.",
+          "date": "March 3, 2024",
+          "tags": ["Machine Learning", "Supervised Learning", "Algorithms"]
+        },
+        {
+          "id": "ml-2",
+          "title": "Unsupervised Learning Techniques",
+          "excerpt": "Clustering, dimensionality reduction, and anomaly detection methods.",
+          "date": "February 15, 2024",
+          "tags": ["Machine Learning", "Unsupervised Learning", "Clustering"]
+        }
+      ]
+    }
+  ]
+} 

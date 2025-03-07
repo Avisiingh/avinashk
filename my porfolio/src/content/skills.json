@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "name": "Data Science",
+      "description": "My data science skills encompass a wide range of techniques and tools for extracting insights from complex datasets. I'm proficient in Python, R, and SQL for data manipulation, analysis, and visualization. I have experience with various statistical methods, data cleaning techniques, and visualization libraries like Matplotlib, Seaborn, and Plotly. I enjoy transforming raw data into meaningful insights that drive decision-making.",
+      "skills": [
+        { "name": "Python", "level": 90 },
+        { "name": "R", "level": 80 },
+        { "name": "SQL", "level": 85 },
+        { "name": "Data Visualization", "level": 85 },
+        { "name": "Statistical Analysis", "level": 80 },
+        { "name": "Data Cleaning", "level": 90 }
+      ]
+    },
+    {
+      "name": "Machine Learning & AI",
+      "description": "In the field of Machine Learning and AI, I have experience implementing various algorithms and models to solve complex problems. I'm familiar with supervised and unsupervised learning techniques, as well as deep learning frameworks. I've worked on projects involving natural language processing, computer vision, and predictive modeling. I'm constantly learning and exploring new advancements in AI to stay at the cutting edge of this rapidly evolving field.",
+      "skills": [
+        { "name": "Supervised Learning", "level": 85 },
+        { "name": "Unsupervised Learning", "level": 80 },
+        { "name": "Deep Learning", "level": 75 },
+        { "name": "Natural Language Processing", "level": 70 },
+        { "name": "Computer Vision", "level": 65 },
+        { "name": "TensorFlow/PyTorch", "level": 75 }
+      ]
+    },
+    {
+      "name": "Web Development",
+      "description": "My web development skills include front-end and back-end technologies. I'm proficient in HTML, CSS, and JavaScript, and have experience with modern frameworks like React and Next.js. I focus on creating responsive, accessible, and user-friendly web applications. I'm also familiar with server-side technologies and database integration, allowing me to build full-stack applications.",
+      "skills": [
+        { "name": "HTML/CSS", "level": 90 },
+        { "name": "JavaScript", "level": 85 },
+        { "name": "React", "level": 80 },
+        { "name": "Next.js", "level": 75 },
+        { "name": "Node.js", "level": 70 },
+        { "name": "Tailwind CSS", "level": 85 }
+      ]
+    },
+    {
+      "name": "Tools & Technologies",
+      "description": "I'm proficient with a variety of tools and technologies that support my development workflow. This includes version control with Git, containerization with Docker, and cloud services like AWS. I'm also experienced with productivity tools like Excel for data analysis, Jupyter Notebooks for interactive computing, and VS Code for efficient coding. These tools help me work more effectively and collaborate with teams.",
+      "skills": [
+        { "name": "Git", "level": 90 },
+        { "name": "Docker", "level": 75 },
+        { "name": "AWS", "level": 70 },
+        { "name": "Excel", "level": 95 },
+        { "name": "Jupyter Notebooks", "level": 90 },
+        { "name": "VS Code", "level": 85 }
+      ]
+    }
+  ]
+} 
