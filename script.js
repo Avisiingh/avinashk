@@ -77,19 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const locations = {
         switzerland: {
             name: 'Switzerland',
-            story: 'In the snowy peaks of Switzerland, we\'ll build snowmen and warm each other by the fire...'
+            story: 'In the snowy peaks of Switzerland, we\'ll build snowmen and warm each other by the fire. The breathtaking views of the Alps will be the perfect backdrop for our love story. We\'ll ski together, drink hot chocolate in cozy cafes, and create memories that will last a lifetime.'
         },
         newyork: {
             name: 'New York',
-            story: 'Walking through Central Park, holding hands as the city lights twinkle around us...'
+            story: 'Walking through Central Park, holding hands as the city lights twinkle around us. We\'ll visit the Empire State Building at sunset, take a romantic carriage ride, and explore the city that never sleeps. Every street corner will be a new adventure with you.'
         },
         miami: {
             name: 'Miami',
-            story: 'Dancing under the stars on Miami Beach, the waves whispering our love story...'
+            story: 'Dancing under the stars on Miami Beach, the waves whispering our love story. We\'ll watch the sunrise over the ocean, explore the vibrant art scene, and create our own paradise in this tropical city. The warm breeze and your smile will make every moment magical.'
         },
         spain: {
             name: 'Spain',
-            story: 'Watching Real Madrid play at Santiago Bernabéu, sharing your passion for football...'
+            story: 'Watching Real Madrid play at Santiago Bernabéu, sharing your passion for football. We\'ll explore the historic streets of Madrid, taste authentic paella, and dance to flamenco music. The passion of Spain will match the passion in our hearts.'
         }
     };
 
@@ -143,6 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
         successMessage.innerHTML = `
             <h2>I Love You, Insha!</h2>
             <p>You've made me the happiest man alive!</p>
+            <p>Every moment with you is a blessing, and I can't wait to start our forever together.</p>
+            <p>❤️ Forever Yours ❤️</p>
         `;
         document.querySelector('.proposal-content').appendChild(successMessage);
     });
