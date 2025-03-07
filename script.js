@@ -6,6 +6,9 @@ const bgMusic = document.getElementById('bgMusic');
 const customCursor = document.querySelector('.custom-cursor');
 const loadingScreen = document.querySelector('.loading-screen');
 const enterBtn = document.querySelector('.enter-btn');
+const messageModal = document.querySelector('.message-modal');
+const messageText = document.querySelector('.message-text');
+const closeModal = document.querySelector('.close-modal');
 
 // State
 let currentSection = 0;
@@ -38,6 +41,31 @@ document.addEventListener('DOMContentLoaded', () => {
         customCursor.style.left = e.clientX + 'px';
         customCursor.style.top = e.clientY + 'px';
     });
+
+    // Add click handlers for interactive elements
+    document.querySelectorAll('.timeline-item, .desire-card, .location, .scene').forEach(element => {
+        element.addEventListener('click', () => {
+            const message = element.getAttribute('data-message');
+            showMessage(message);
+        });
+    });
+});
+
+// Show message modal
+function showMessage(message) {
+    messageText.textContent = message;
+    messageModal.style.display = 'flex';
+    messageModal.style.opacity = '1';
+    messageModal.style.transform = 'translateY(0)';
+}
+
+// Close message modal
+closeModal.addEventListener('click', () => {
+    messageModal.style.opacity = '0';
+    messageModal.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+        messageModal.style.display = 'none';
+    }, 300);
 });
 
 // Navigation
