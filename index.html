@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Insha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading our love story...</p>
+    </div>
+
+    <!-- Home Page -->
+    <section id="home" class="section active">
+        <div class="content">
+            <h1 class="glow">Insha</h1>
+            <p class="subtitle">My Love, My Life, My Everything</p>
+            <button class="enter-btn">Enter Our Story</button>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- First Meeting -->
+    <section id="first-meeting" class="section">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h2>Our First Meeting</h2>
+                <p>The magic in Delhi that changed my life forever...</p>
+            </div>
+            <div class="timeline-item">
+                <h2>That Special Day</h2>
+                <p>How your smile lit up my world...</p>
+            </div>
+        </div>
+        <div class="music-player">
+            <i class="fas fa-music"></i>
+        </div>
+    </section>
+
+    <!-- Desires Section -->
+    <section id="desires" class="section">
+        <div class="desires-container">
+            <h2>My Deepest Desires</h2>
+            <div class="desire-cards">
+                <div class="desire-card">
+                    <h3>Your Touch</h3>
+                    <p class="hidden">The way your fingers trace my skin...</p>
+                </div>
+                <div class="desire-card">
+                    <h3>Your Kiss</h3>
+                    <p class="hidden">Your lips against mine...</p>
+                </div>
+                <div class="desire-card">
+                    <h3>Your Love</h3>
+                    <p class="hidden">The way you make me feel...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dream Destinations -->
+    <section id="destinations" class="section">
+        <div class="world-map">
+            <div class="location" data-location="switzerland">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Switzerland</span>
+            </div>
+            <div class="location" data-location="newyork">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>New York</span>
+            </div>
+            <div class="location" data-location="miami">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Miami</span>
+            </div>
+            <div class="location" data-location="spain">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Spain</span>
+            </div>
+        </div>
+        <div class="destination-story hidden">
+            <h3>Our Story in <span class="location-name"></span></h3>
+            <p class="story-content"></p>
+        </div>
+    </section>
+
+    <!-- Our Fairytale -->
+    <section id="fairytale" class="section">
+        <div class="fairytale-content">
+            <h2>Our Fairytale</h2>
+            <div class="future-scenes">
+                <div class="scene">
+                    <h3>Our Wedding Day</h3>
+                    <p class="hidden">Walking down the aisle to you...</p>
+                </div>
+                <div class="scene">
+                    <h3>Our Home</h3>
+                    <p class="hidden">Building our life together...</p>
+                </div>
+                <div class="scene">
+                    <h3>Our Family</h3>
+                    <p class="hidden">Growing old together...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Proposal -->
+    <section id="proposal" class="section">
+        <div class="proposal-content">
+            <h2>Insha</h2>
+            <p class="proposal-text">Will you make me the happiest man alive?</p>
+            <div class="ring-animation">
+                <i class="fas fa-ring"></i>
+            </div>
+            <button class="yes-btn">Yes, I Will!</button>
+        </div>
+    </section>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Audio Elements -->
+    <audio id="background-music" loop>
+        <source src="assets/romantic-piano.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html> 
