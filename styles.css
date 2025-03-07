@@ -1,3 +1,240 @@
+/* Modern Design System */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --accent-color: #ff3b30;
+    --text-color: #1d1d1f;
+    --background-color: #ffffff;
+    --card-bg: #f5f5f7;
+    --section-bg: #fbfbfb;
+    --text-secondary: #86868b;
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    --spacing-unit: 8px;
+    --container-width: 1200px;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-unit);
+}
+
+h1 {
+    font-size: 48px;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 36px;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-unit) * 2;
+}
+
+/* Section Styles */
+.section {
+    min-height: 100vh;
+    padding: calc(var(--spacing-unit) * 8) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--section-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.section:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+/* Container */
+.content, .timeline, .desires-container, .world-map, .fairytale-content, .proposal-content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 calc(var(--spacing-unit) * 2);
+    width: 100%;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: var(--secondary-color);
+}
+
+.glow {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+/* Cards & Components */
+.timeline-item, .desire-card, .location, .scene {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 3);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:hover, .desire-card:hover, .location:hover, .scene:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.next-section-btn, .enter-btn, .yes-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.next-section-btn:hover, .enter-btn:hover, .yes-btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.next-section-btn {
+    position: fixed;
+    bottom: calc(var(--spacing-unit) * 3);
+    right: calc(var(--spacing-unit) * 3);
+    z-index: 1000;
+}
+
+/* Music Player */
+.music-player {
+    position: fixed;
+    bottom: calc(var(--spacing-unit) * 3);
+    left: calc(var(--spacing-unit) * 3);
+    z-index: 1000;
+}
+
+.music-player button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 20px;
+}
+
+.music-player button:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 100%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: calc(var(--spacing-unit) * 4) 0;
+    }
+
+    .content, .timeline, .desires-container, .world-map, .fairytale-content, .proposal-content {
+        padding: 0 calc(var(--spacing-unit) * 2);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
 /* Global Styles */
 :root {
     --primary-color: #FF69B4;    /* Hot pink */
