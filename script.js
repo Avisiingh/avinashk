@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', (e) => {
         customCursor.style.left = e.clientX + 'px';
         customCursor.style.top = e.clientY + 'px';
+        
+        // Add 3D effect based on mouse position
+        const xAxis = (window.innerWidth / 2 - e.clientX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.clientY) / 25;
+        
+        sections.forEach(section => {
+            section.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
     });
 
     // Handle section transitions
@@ -30,21 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSection = index;
     }
 
-    // Scroll handling
-    let isScrolling = false;
-    document.addEventListener('wheel', (e) => {
-        if (isScrolling) return;
-        
-        isScrolling = true;
-        setTimeout(() => {
-            isScrolling = false;
-        }, 1000);
-
-        if (e.deltaY > 0 && currentSection < sections.length - 1) {
-            showSection(currentSection + 1);
-        } else if (e.deltaY < 0 && currentSection > 0) {
-            showSection(currentSection - 1);
-        }
+    // Make all sections visible at once
+    sections.forEach(section => {
+        section.style.opacity = '1';
+        section.style.transform = 'translateZ(0)';
     });
 
     // Enter button click handler
@@ -69,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             const hiddenText = card.querySelector('.hidden');
             hiddenText.style.opacity = '1';
-            hiddenText.style.transform = 'translateY(0)';
+            hiddenText.style.transform = 'translateZ(20px)';
         });
     });
 
@@ -103,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             locationName.textContent = locationData.name;
             storyContent.textContent = locationData.story;
             storyContainer.classList.remove('hidden');
+            storyContainer.style.transform = 'translateZ(30px)';
         });
     });
 
@@ -111,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scene.addEventListener('click', () => {
             const hiddenText = scene.querySelector('.hidden');
             hiddenText.style.opacity = '1';
-            hiddenText.style.transform = 'translateY(0)';
+            hiddenText.style.transform = 'translateZ(20px)';
         });
     });
 
@@ -124,12 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                entry.target.style.transform = 'translateZ(20px)';
             }
         });
     }, observerOptions);
 
     document.querySelectorAll('.timeline-item').forEach(item => {
         observer.observe(item);
+        item.style.transform = 'translateZ(10px)';
     });
 
     // Final proposal button

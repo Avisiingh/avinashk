@@ -17,11 +17,12 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     color: var(--text-color);
     overflow-x: hidden;
     cursor: none;
     line-height: 1.6;
+    perspective: 1000px;
 }
 
 /* Loading Screen */
@@ -61,19 +62,17 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
 }
 
 .section.active {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateZ(0);
 }
 
 /* Home Section */
 #home {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('assets/romantic-bg.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
@@ -87,6 +86,7 @@ body {
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     animation: glow 2s ease-in-out infinite alternate;
     margin-bottom: 2rem;
+    transform: translateZ(50px);
 }
 
 @keyframes glow {
@@ -98,7 +98,8 @@ body {
     font-size: 1.8rem;
     margin: 2rem 0;
     color: var(--text-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateZ(30px);
 }
 
 .enter-btn {
@@ -120,29 +121,46 @@ body {
 
 /* Timeline Section */
 .timeline {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     padding: 3rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform: translateZ(20px);
 }
 
 .timeline-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 15px;
     margin: 2rem 0;
     transition: transform 0.3s ease;
+    transform: translateZ(10px);
 }
 
-.timeline-item:hover {
-    transform: translateY(-5px);
+.timeline-item h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.timeline-item p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
 }
 
 /* Desires Section */
 .desires-container {
     max-width: 1200px;
     padding: 2rem;
+    transform: translateZ(20px);
+}
+
+.desires-container h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .desire-cards {
@@ -153,19 +171,25 @@ body {
 }
 
 .desire-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--secondary-color);
     cursor: pointer;
     transition: all 0.3s ease;
+    transform: translateZ(10px);
 }
 
-.desire-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
-    background: rgba(255, 255, 255, 0.15);
+.desire-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.desire-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 .hidden {
@@ -176,27 +200,26 @@ body {
 
 /* World Map Section */
 .world-map {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     padding: 2rem;
+    transform: translateZ(20px);
 }
 
 .location {
-    position: absolute;
-    cursor: pointer;
-    transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateZ(10px);
+    border: 1px solid var(--secondary-color);
 }
 
-.location:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
+.location span {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
 }
 
 /* Fairytale Section */
@@ -204,6 +227,13 @@ body {
     max-width: 1000px;
     padding: 2rem;
     text-align: center;
+    transform: translateZ(20px);
+}
+
+.fairytale-content h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .future-scenes {
@@ -214,28 +244,49 @@ body {
 }
 
 .scene {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--secondary-color);
     cursor: pointer;
     transition: all 0.3s ease;
+    transform: translateZ(10px);
+    margin: 1rem 0;
 }
 
-.scene:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+.scene h3 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.scene p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 /* Proposal Section */
 .proposal-content {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transform: translateZ(20px);
+}
+
+.proposal-content h2 {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.proposal-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 1rem 0;
 }
 
 .ring-animation {
@@ -303,6 +354,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .section {
+        padding: 1rem;
+    }
+    
     .glow {
         font-size: 4rem;
     }
@@ -311,13 +366,16 @@ body {
         font-size: 1.4rem;
     }
     
-    .timeline, .desire-card, .scene, .proposal-content {
-        padding: 1.5rem;
+    .timeline-item h2,
+    .desire-card h3,
+    .scene h3 {
+        font-size: 1.6rem;
     }
     
-    .yes-btn {
-        padding: 1rem 2rem;
-        font-size: 1.4rem;
+    .timeline-item p,
+    .desire-card p,
+    .scene p {
+        font-size: 1.1rem;
     }
     
     .desire-cards {
@@ -379,19 +437,13 @@ body {
 
 /* Success Message */
 .success-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     padding: 3rem;
     border-radius: 20px;
     text-align: center;
     animation: fadeIn 1s ease-out;
-    z-index: 10000;
-    box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
+    transform: translateZ(50px);
 }
 
 .success-message h2 {
@@ -441,16 +493,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--gradient-start);
+    background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color);
+    background: var(--primary-color);
 }
 
 /* Text Selection */
@@ -475,4 +527,16 @@ body {
     .custom-cursor {
         display: none;
     }
+}
+
+/* 3D Hover Effects */
+.section:hover {
+    transform: translateZ(30px);
+}
+
+.desire-card:hover,
+.scene:hover,
+.location:hover {
+    transform: translateZ(20px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
 } 
