@@ -33,15 +33,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle section transitions
     function showSection(index) {
-        sections.forEach(section => section.classList.remove('active'));
-        sections[index].classList.add('active');
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.pointerEvents = 'none';
+        });
+        
+        sections[index].style.opacity = '1';
+        sections[index].style.transform = 'translateY(0)';
+        sections[index].style.pointerEvents = 'auto';
         currentSection = index;
     }
+
+    // Add navigation buttons to each section
+    sections.forEach((section, index) => {
+        const nextButton = document.createElement('button');
+        nextButton.className = 'next-section-btn';
+        nextButton.innerHTML = 'Next Section →';
+        nextButton.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: var(--secondary-color);
+            color: var(--background-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        `;
+        nextButton.addEventListener('mouseover', () => {
+            nextButton.style.transform = 'scale(1.1)';
+        });
+        nextButton.addEventListener('mouseout', () => {
+            nextButton.style.transform = 'scale(1)';
+        });
+        nextButton.addEventListener('click', () => {
+            if (index < sections.length - 1) {
+                showSection(index + 1);
+            }
+        });
+        section.appendChild(nextButton);
+    });
 
     // Make all sections visible at once
     sections.forEach(section => {
         section.style.opacity = '1';
         section.style.transform = 'translateZ(0)';
+        section.style.pointerEvents = 'auto';
     });
 
     // Enter button click handler

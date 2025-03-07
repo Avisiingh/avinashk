@@ -63,11 +63,15 @@ body {
     align-items: center;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease;
+    transition: all 0.8s ease;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .section.active {
-    transform: translateZ(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Home Section */
@@ -539,4 +543,26 @@ body {
 .location:hover {
     transform: translateZ(20px) scale(1.05);
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+/* Next Section Button */
+.next-section-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.next-section-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 } 
