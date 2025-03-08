@@ -9,6 +9,7 @@ const nextConfig = {
   // Uncomment the following lines when deploying to GitHub Pages
   // output: 'export',
   // basePath: '/your-repo-name', // Replace with your GitHub repository name
+  // Netlify specific configuration
 };
 
 module.exports = nextConfig; 
